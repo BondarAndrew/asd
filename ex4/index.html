@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Перевірка числа</title>
+</head>
+<body>
+  <input type="number" id="numberInput" placeholder="Введіть число">
+  <br>
+  <button onclick="checkNumber()">Перевірити</button>
+  
+  <script>
+    function checkNumber() {
+      var number = parseFloat(document.getElementById("numberInput").value);
+      
+      if (number > 10 && number < 20) {
+        alert("Число входить в діапазон від 10 до 20");
+      } else {
+        alert("Число не входить в діапазон від 10 до 20");
+      }
+    }
+  </script>
+</body>
+</html>

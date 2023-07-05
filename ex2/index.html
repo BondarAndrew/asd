@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Перевірка суми</title>
+</head>
+<body>
+  <input type="number" id="num1" placeholder="Число 1">
+  <br>
+  <input type="number" id="num2" placeholder="Число 2">
+  <br>
+  <button onclick="checkSum()">Перевірити</button>
+  
+  <script>
+    function checkSum() {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      let sum = num1 + num2;
+      
+      if (sum > 10) {
+        alert("Сума більша за 10");
+      } else {
+        alert("Сума менша або дорівнює 10");
+      }
+    }
+  </script>
+</body>
+</html>

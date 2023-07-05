@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Перевірка форми</title>
+</head>
+<body>
+  <form>
+    <label for="nameInput">Ім'я:</label>
+    <input type="text" id="nameInput" placeholder="Введіть ім'я">
+    <br>
+    <label for="emailInput">Email:</label>
+    <input type="email" id="emailInput" placeholder="Введіть email">
+    <br>
+    <label for="passwordInput">Пароль:</label>
+    <input type="password" id="passwordInput" placeholder="Введіть пароль">
+    <br>
+    <button type="button" onclick="validateForm()">Перевірити</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("nameInput").value;
+      var email = document.getElementById("emailInput").value;
+      var password = document.getElementById("passwordInput").value;
+
+      if (name.length < 3 || email.indexOf('@') === -1 || email.indexOf('.') === -1 || password.length < 6) {
+        alert("Помилка: неправильно заповнені дані!");
+      } else {
+        window.location.href = "інша-сторінка.html";
+      }
+    }
+  </script>
+</body>
+</html>

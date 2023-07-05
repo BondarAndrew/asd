@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Перевірка тексту</title>
+</head>
+<body>
+  <input type="text" id="textInput" placeholder="Введіть текст">
+  <br>
+  <button onclick="checkText()">Перевірити</button>
+  
+  <script>
+    function checkText() {
+      var text = document.getElementById("textInput").value;
+      
+      if (text.includes("JavaScript") && !text.includes(" ")) {
+        alert("Текст містить слово JavaScript");
+      } else {
+        alert("Текст не містить слово JavaScript");
+      }
+    }
+  </script>
+</body>
+</html>
